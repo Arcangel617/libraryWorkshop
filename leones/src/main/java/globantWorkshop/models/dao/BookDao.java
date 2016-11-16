@@ -22,7 +22,7 @@ private EntityManager entityManager;
 
 
     public void create(Book book) {
-        //Should Be implemented
+        entityManager.persist(book);
         return;
     }
 
@@ -38,13 +38,12 @@ private EntityManager entityManager;
     }
 
     public void update(Book book) throws Exception{
-        //Should Be implemented
+        entityManager.merge(book);
         return;
     }
 
     public Book getById(int id) {
-    //Should Be implemented
-        return new Book();
+        return entityManager.find(Book.class, id);
     }
 
 }
