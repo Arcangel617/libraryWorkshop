@@ -29,7 +29,7 @@ public class BookController {
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     public List<Book> getAllBooks(){
-        return new ArrayList<>();
+        return bookService.getAllBooks();
     }
 
     /**

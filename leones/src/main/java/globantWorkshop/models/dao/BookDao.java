@@ -34,8 +34,7 @@ private EntityManager entityManager;
     @SuppressWarnings("unchecked")
     public List<Book> getAllBooks(){
         //Should Be implemented
-        List bookList = new ArrayList<>();
-        return bookList;
+        return entityManager.createQuery("from Book").getResultList();
     }
 
     public void update(Book book) throws Exception{

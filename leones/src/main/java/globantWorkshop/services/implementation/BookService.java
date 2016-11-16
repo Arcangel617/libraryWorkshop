@@ -32,6 +32,11 @@ public class BookService implements BookServiceInterface {
     public ArrayList<Book> getAllBooks() {
         //Should Be implemented
         List<Book> books = new ArrayList<Book>();
+        try {
+            books = bookDao.getAllBooks();
+        } catch (Exception ex) {
+            throw ex;
+        }
         return (ArrayList<Book>) books;
     }
 
